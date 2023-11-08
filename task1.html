@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SURGE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            margin-left: 20px;
+        }
+
+        .logo img {
+            width: 100px;
+            height: auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        #slideshow {
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        #slideshow img {
+            width: 100%;
+            height: auto;
+        }
+
+        #products, #contact {
+            background-color: rgba(0, 0, 0, 0.8);
+            border: none;
+            text-align: center;
+            margin-top: 3em; 
+            margin-bottom: 3em; 
+        }
+
+        #products h2, #contact h2 {
+            text-transform: uppercase;
+            font-size: 36px;
+        }
+
+        .category-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .category-option {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .category-option img {
+            width: 150px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+
+        .right-section h2 {
+            text-align: center;
+            font-size: 36px; 
+            margin-top: 3em; 
+            margin-bottom: 3em; 
+        }
+
+        .right-section p {
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        .two-column {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .left-column {
+            flex: 1;
+        }
+
+        .right-column {
+            flex: 2;
+        }
+
+        .right-column img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="C:\Users\neela\Downloads\surge-high-resolution-logo-white.png" alt="Company Logo">
+        </div>
+        <nav>
+            <ul>
+                <li class="contact-about"><a href="#contact">Contact Us</a></li>
+                <li class="contact-about"><a href="#about">About Us</a></li>
+                <li class="contact-about"><a href="#">Home</a></li>
+                <li class="contact-about"><a href="#products">Products</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="slideshow">
+        <img src="C:\Users\neela\Downloads\s1.jpg" alt="Slideshow Image 1">
+    </section>
+
+    <section id="products">
+        <h2>Products</h2>
+        <div class="category-options">
+            <div class="category-option">
+                <img src="C:\Users\neela\Downloads\sa1.jpg" alt="Shirts">
+                <p>Shirt</p>
+                <p>Price: ₹1000</p>
+            </div>
+            <div class="category-option">
+                <img src="C:\Users\neela\Downloads\sa3.jpg" alt="T-Shirts">
+                <p>T-Shirt</p>
+                <p>Price: ₹800</p>
+            </div>
+            <div class="category-option">
+                <img src="C:\Users\neela\Downloads\sa2.jpg" alt="Jackets">
+                <p>Jacket</p>
+                <p>Price: ₹3000</p>
+            </div>
+            <div class="category-option">
+                <img src="C:\Users\neela\Downloads\man-wearing-blue-shorts-close-up.jpg" alt="Shorts">
+                <p>Short</p>
+                <p>Price: ₹1500</p>
+            </div>
+            <div class="category-option">
+                <img src="C:\Users\neela\Downloads\sa6.jpg" alt="Jeans">
+                <p>Jeans</p>
+                <p>Price: ₹1200</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="right-section">
+        <h2>About Us</h2>
+        <div class="two-column">
+            <div class="left-column">
+                <img src="C:\Users\neela\Downloads\surge-high-resolution-logo-white.png" alt="Company Image">
+            </div>
+            <div class="right-column">
+                <p>Welcome to SURGE, where style meets comfort!
+
+                At SURGE, we are passionate about fashion and believe that what you wear is an expression of your unique personality. Our mission is to provide you with the trendiest and most comfortable clothing that allows you to look and feel your best every day.
+                
+                Founded in 2005, SURGE has quickly become a go-to destination for fashion enthusiasts. We take pride in our commitment to quality and the finest craftsmanship. Our designs are carefully curated to cater to a wide range of tastes, from classic elegance to contemporary trends.
+                
+                We prioritize sustainability and ethical production practices. Our clothing is made from high-quality, eco-friendly materials, and we work with suppliers who share our values. We are dedicated to reducing our environmental footprint and making a positive impact on the fashion industry.
+                
+                Our team is dedicated to providing you with exceptional customer service. We are here to help you find the perfect outfit for any occasion and ensure your shopping experience is as enjoyable as wearing our clothes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="right-section">
+        <h2>Contact Us</h2>
+        <p>Phone: 9xxxxxxxx5</p>
+        <p>Email: <a href="mailto:internshiptask1@mail.com">internshiptask1@mail.com</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/surge">@surge</a></p>
+        <p>Twitter: <a href="https://twitter.com/surge">@surge</a></p>
+    </section>
+</body>
+</html>
