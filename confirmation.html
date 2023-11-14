@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            object-fit: cover; 
+        }
+
+        .confirmation-container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .confirmation-message {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<video autoplay muted loop id="background-video">
+    <source src="C:\Users\neela\Downloads\production_id_4239806 (1080p).mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<div class="confirmation-container">
+    <h2>Registration Successful!</h2>
+    <p class="confirmation-message">Thank you for registering. Your account has been created successfully.</p>
+</div>
+
+</body>
+</html>
