@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #DAA325;
+        }
+
+        header {
+            background-color: #D2492D;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fcfbf8;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+
+        .cart-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-icon {
+            font-size: 24px;
+            margin-right: 5px;
+        }
+
+        .cart-count {
+            font-size: 18px;
+            color: #e44d26;
+        }
+
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .product-card,
+        .cart-card {
+            max-width: 200px;
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .product-image,
+        .cart-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .product-price,
+        .cart-price {
+            font-size: 16px;
+            color: #333;
+            margin-top: 5px;
+        }
+
+        .add-to-cart-button {
+            background-color: #e44d26;
+            color: #fff;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add-to-cart-button:hover {
+            background-color: #333;
+        }
+
+        #cartTable {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        #cartTable th,
+        #cartTable td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        #cartTable th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="C:\Users\neela\Downloads\surge-high-resolution-logo-white.png" alt="Logo">
+    </header>
+
+    <div class="container">
+        <div class="cart-container">
+            <div>
+                <span class="cart-icon">🛒</span>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+            <button onclick="viewCart()">View Cart</button>
+        </div>
+
+        <div class="product-list">
+            <div class="product-card">
+                <img src="C:\Users\neela\Downloads\eugene-chystiakov-3neSwyntbQ8-unsplash.jpg" alt="Product 1"
+                    class="product-image">
+                <p>Comfortable and stylish chair for your living room.</p>
+                <span class="product-price">$199.99</span>
+                <button class="add-to-cart-button" onclick="addToCart('Comfortable Chair', 199.99)">Add to
+                    Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="C:\Users\neela\Downloads\kari-shea-1SAnrIxw5OY-unsplash.jpg" alt="Product 2"
+                    class="product-image">
+                <p>High-performance laptop with a sleek design for work and play.</p>
+                <span class="product-price">$899.99</span>
+                <button class="add-to-cart-button"
+                    onclick="addToCart('High-performance laptop',899.99)">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="C:\Users\neela\Downloads\sebastian-banasiewcz-oXXc-s5nNy8-unsplash.jpg" alt="Product 3"
+                    class="product-image">
+                <p>Wireless noise-canceling headphones for an immersive audio experience.</p>
+                <span class="product-price">$149.99</span>
+                <button class="add-to-cart-button"
+                    onclick="addToCart('Wireless Headphones', 149.99)">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="C:\Users\neela\Downloads\david-svihovec-HM-Y497t5CU-unsplash.jpg" alt="Product 4"
+                    class="product-image">
+                <p>Smartwatch with fitness tracking features for an active lifestyle.</p>
+                <span class="product-price">$129.99</span>
+                <button class="add-to-cart-button" onclick="addToCart('Smartwatch', 129.99)">Add to
+                    Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="C:\Users\neela\Downloads\stephen-phillips-hostreviews-co-uk-em37kS8WJJQ-unsplash.jpg"
+                    alt="Product 5" class="product-image">
+                <p>Classic leather wallet with multiple card slots and compartments.</p>
+                <span class="product-price">$49.99</span>
+                <button class="add-to-cart-button" onclick="addToCart('Leather Wallet', 49.99)">Add to
+                    Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="C:\Users\neela\Downloads\electric-blender-make-fruit-juice-smoothie-wooden-kitchen-table-concept-healthy-diet.jpg"
+                    alt="Product 6" class="product-image">
+                <p>Compact and powerful blender for making smoothies and shakes.</p>
+                <span class="product-price">$79.99</span>
+                <button class="add-to-cart-button" onclick="addToCart('Blender', 79.99)">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="C:\Users\neela\Downloads\P2PEVK0.jpg" alt="Product 7" class="product-image">
+                <p>Stylish sunglasses with UV protection for sunny days.</p>
+                <span class="product-price">$59.99</span>
+                <button class="add-to-cart-button" onclick="addToCart('Sunglasses', 59.99)">Add to
+                    Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="C:\Users\neela\Downloads\jordan-bigelow-53BjYSxca5g-unsplash.jpg" alt="Product 8"
+                    class="product-image">
+                <p>Soft and cozy blanket for cold winter nights.</p>
+                <span class="product-price">$89.99</span>
+                <button class="add-to-cart-button" onclick="addToCart('Cozy Blanket', 89.99)">Add to
+                    Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="C:\Users\neela\Downloads\pexels-ketut-subiyanto-4349792.jpg" alt="Product 9"
+                    class="product-image">
+                <p>Portable coffee maker for coffee enthusiasts on the go.</p>
+                <span class="product-price">$129.99</span>
+                <button class="add-to-cart-button" onclick="addToCart('Coffee Maker', 129.99)">Add to
+                    Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="C:\Users\neela\Downloads\domino-p2WUEFGrAdA-unsplash.jpg" alt="Product 10"
+                    class="product-image">
+                <p>Elegant and durable watch with a stainless steel band.</p>
+                <span class="product-price">$199.99</span>
+                <button class="add-to-cart-button"
+                    onclick="addToCart('Stainless Steel Watch', 199.99)">Add to Cart</button>
+            </div>
+        </div>
+
+        <table id="cartTable">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody id="cartItems"></tbody>
+        </table>
+    </div>
+
+    <script>
+        let cartCount = 0;
+        let cartItems = [];
+
+        function addToCart(productName, productPrice) {
+            cartCount++;
+            document.getElementById('cartCount').innerText = cartCount;
+
+            cartItems.push({ name: productName, price: productPrice });
+
+            updateCartItems();
+        }
+
+        function updateCartItems() {
+            const cartItemsBody = document.getElementById('cartItems');
+            cartItemsBody.innerHTML = '';
+
+            cartItems.forEach(item => {
+                const row = cartItemsBody.insertRow();
+                const cell1 = row.insertCell(0);
+                const cell2 = row.insertCell(1);
+
+                cell1.textContent = item.name;
+                cell2.textContent = `$${item.price}`;
+            });
+        }
+
+        function viewCart() {
+            const cartWindow = window.open('', '_blank');
+            cartWindow.document.write('<html><head><title>Shopping Cart</title></head><body><h1>Shopping Cart</h1><div id="cartItems" class="product-list"></div></body></html>');
+
+            const cartItemsDiv = cartWindow.document.getElementById('cartItems');
+            cartItems.forEach(item => {
+                cartItemsDiv.innerHTML += `
+                <div class="cart-card">
+                    <p>${item.name}</p>
+                    <span class="cart-price">$${item.price}</span>
+                </div>`;
+            });
+        }
+    </script>
+</body>
+
+</html>
